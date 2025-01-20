@@ -1,0 +1,265 @@
+/* Color Variables */
+.root {
+    /* Light Theme Colors */
+    -fx-primary: #6366f1;                                       /* Solid primary for consistency */
+    -fx-primary-hover: #4f46e5;                                /* Darker primary for hover */
+    -fx-secondary: #22c55e;                                    /* Success */
+    -fx-warning: #eab308;                                      /* Warning */
+    -fx-danger: #ef4444;                                       /* Danger */
+    -fx-background: #ffffff;                                   /* Main background */
+    -fx-surface: #f8fafc;                                      /* Surface */
+    -fx-surface-hover: #f1f5f9;                                /* Hover state */
+    -fx-border: #cbd5e1;                                       /* Darker border for better visibility */
+    -fx-text: #0f172a;                                        /* Primary text */
+    -fx-text-secondary: #64748b;                              /* Secondary text */
+
+    -fx-background-color: -fx-background;
+    -fx-font-family: "Segoe UI", "SF Pro Display", "Inter", system-ui, sans-serif;
+}
+
+.dark-theme-1 {
+    /* Dark Theme 1 - Deep Purple */
+    -fx-primary: #8b5cf6;
+    -fx-primary-hover: #7c3aed;
+    -fx-secondary: #10b981;
+    -fx-warning: #f59e0b;
+    -fx-danger: #ef4444;
+    -fx-background: #1e1b4b;
+    -fx-surface: #312e81;
+    -fx-surface-hover: #3730a3;
+    -fx-border: #4338ca;
+    -fx-text: #f8fafc;
+    -fx-text-secondary: #cbd5e1;
+}
+
+.dark-theme-2 {
+    /* Dark Theme 2 - Slate */
+    -fx-primary: #0ea5e9;
+    -fx-primary-hover: #0284c7;
+    -fx-secondary: #10b981;
+    -fx-warning: #f59e0b;
+    -fx-danger: #ef4444;
+    -fx-background: #0f172a;
+    -fx-surface: #1e293b;
+    -fx-surface-hover: #334155;
+    -fx-border: #475569;
+    -fx-text: #f8fafc;
+    -fx-text-secondary: #cbd5e1;
+}
+
+/* Apply theme by adding one of these classes to root: .light-theme, .dark-theme-1, or .dark-theme-2 */
+.root {
+    -fx-background-color: -fx-background;
+    -fx-font-family: "Segoe UI", system-ui, sans-serif;
+    -fx-font-size: 13px;
+}
+
+/* Tab Pane Styling */
+.tab-pane {
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab-header-area {
+    -fx-padding: 0 0 0 0;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: -fx-surface;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.tab {
+    -fx-background-color: transparent;
+    -fx-padding: 12 24;
+    -fx-cursor: hand;
+}
+
+.tab:selected {
+    -fx-background-color: -fx-primary;
+    -fx-background-radius: 8;
+}
+
+.tab .tab-label {
+    -fx-text-fill: -fx-text-secondary;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: white;
+}
+
+/* TableView Styling */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-background-radius: 12;
+    -fx-padding: 0;
+    -fx-border-radius: 12;
+    -fx-border-color: -fx-border;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.table-view .column-header-background {
+    -fx-background-color: -fx-primary;
+    -fx-background-radius: 12 12 0 0;
+    -fx-background-insets: 0;
+    -fx-padding: 8px 0;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-size: 45px;
+    -fx-border-width: 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+}
+
+/* This fixes the top right corner */
+.table-view .column-header-background .show-hide-columns-button {
+    -fx-background-color: -fx-primary;
+    -fx-background-radius: 0 12 0 0;
+}
+
+/* This ensures clean corners */
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-drag-header {
+    -fx-background-color: -fx-primary;
+}
+
+/* Rest of the table styles remain the same */
+.table-view .table-row-cell {
+    -fx-background-color: -fx-surface;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: derive(-fx-surface, 5%);
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: derive(-fx-primary, 90%);
+}
+
+.table-view .table-cell {
+    -fx-text-fill: -fx-text;
+    -fx-alignment: center-left;
+    -fx-padding: 12 16;
+}
+
+/* Modern Input Fields */
+.text-field {
+    -fx-background-color: -fx-surface;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: -fx-border;
+    -fx-border-width: 1;
+    -fx-padding: 12 16;
+    -fx-text-fill: -fx-text;
+    -fx-prompt-text-fill: -fx-text-secondary;
+}
+
+.text-field:focused {
+    -fx-border-color: -fx-primary;
+    -fx-effect: dropshadow(gaussian, rgba(99,102,241,0.2), 8, 0, 0, 0);
+}
+
+/* Button Styles */
+.button {
+    -fx-background-color: -fx-primary;
+    -fx-background-radius: 8;
+    -fx-padding: 12 24;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: -fx-primary-hover;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 12, 0, 0, 2);
+}
+
+.button:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.button.secondary {
+    -fx-background-color: -fx-secondary;
+}
+
+.button.warning {
+    -fx-background-color: -fx-warning;
+}
+
+.button.danger {
+    -fx-background-color: -fx-danger;
+}
+
+/* Scrollbar Styling */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: -fx-text-secondary;
+    -fx-background-radius: 8;
+    -fx-opacity: 0.3;
+}
+
+.scroll-bar:vertical .thumb:hover,
+.scroll-bar:horizontal .thumb:hover {
+    -fx-opacity: 0.5;
+}
+
+/* Chart Styling */
+.chart {
+    -fx-background-color: transparent;
+    -fx-padding: 16;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: -fx-border;
+}
+
+.chart-horizontal-grid-lines {
+    -fx-stroke: -fx-border;
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+}
+
+/* Progress Bar */
+.progress-bar {
+    -fx-background-color: -fx-surface;
+    -fx-background-radius: 8;
+}
+
+.progress-bar .bar {
+    -fx-background-color: -fx-primary;
+    -fx-background-radius: 8;
+}
+
+.progress-bar .track {
+    -fx-background-color: -fx-surface;
+    -fx-background-radius: 8;
+}
